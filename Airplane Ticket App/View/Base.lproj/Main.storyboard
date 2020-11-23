@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Ticket Type and Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-zW-Ej7">
+                                <rect key="frame" x="25" y="73" width="325" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="0ID-HI-u3H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Ticket" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUL-rk-qXg">
+                                <rect key="frame" x="78" y="167" width="219" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pzJ-l6-uHt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="numberPad"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oag-5Q-YiY">
+                                <rect key="frame" x="0.0" y="234" width="375" height="187"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBw-aE-zrM">
+                                <rect key="frame" x="247" y="471" width="83" height="30"/>
+                                <state key="normal" title="Go to check"/>
+                                <connections>
+                                    <action selector="goToCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Czm-A7-vTy"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kem-wt-liP">
+                                <rect key="frame" x="25" y="509" width="325" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="2HT-oO-1Jg"/>
+                                    <constraint firstAttribute="height" constant="128" id="CRF-5e-pfU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-nN-bmn">
+                                <rect key="frame" x="40" y="471" width="109" height="30"/>
+                                <state key="normal" title="Add more ticket"/>
+                                <connections>
+                                    <action selector="addTicket:" destination="BYZ-38-t0r" eventType="touchUpInside" id="90c-Sy-QhB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7803921568627451" green="0.96470588235294119" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qHe-nN-bmn" firstAttribute="top" secondItem="oag-5Q-YiY" secondAttribute="bottom" constant="50" id="3GY-Cg-Pfw"/>
+                            <constraint firstItem="oBw-aE-zrM" firstAttribute="leading" secondItem="qHe-nN-bmn" secondAttribute="trailing" constant="98" id="9Ej-Et-cRg"/>
+                            <constraint firstItem="kem-wt-liP" firstAttribute="top" secondItem="qHe-nN-bmn" secondAttribute="bottom" constant="8" symbolic="YES" id="AKA-wj-xtZ"/>
+                            <constraint firstItem="bUL-rk-qXg" firstAttribute="centerX" secondItem="iqE-zW-Ej7" secondAttribute="centerX" id="DJs-yb-hLB"/>
+                            <constraint firstItem="oag-5Q-YiY" firstAttribute="centerX" secondItem="kem-wt-liP" secondAttribute="centerX" id="KrL-UJ-zKx"/>
+                            <constraint firstItem="iqE-zW-Ej7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="Qax-UR-TKm"/>
+                            <constraint firstItem="qHe-nN-bmn" firstAttribute="top" secondItem="oBw-aE-zrM" secondAttribute="top" id="Ux7-7q-qhU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oBw-aE-zrM" secondAttribute="trailing" symbolic="YES" id="ZSf-96-YqO"/>
+                            <constraint firstItem="bUL-rk-qXg" firstAttribute="centerX" secondItem="oag-5Q-YiY" secondAttribute="centerX" id="ZjV-Qn-b63"/>
+                            <constraint firstItem="qHe-nN-bmn" firstAttribute="baseline" secondItem="oBw-aE-zrM" secondAttribute="baseline" id="ffl-xb-hy6"/>
+                            <constraint firstItem="bUL-rk-qXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="ftf-ob-1wg"/>
+                            <constraint firstItem="bUL-rk-qXg" firstAttribute="top" secondItem="iqE-zW-Ej7" secondAttribute="bottom" constant="72" id="lDI-Gb-2wI"/>
+                            <constraint firstItem="iqE-zW-Ej7" firstAttribute="leading" secondItem="qHe-nN-bmn" secondAttribute="leading" constant="-15" id="nXE-ze-ujL"/>
+                            <constraint firstAttribute="trailing" secondItem="oag-5Q-YiY" secondAttribute="trailing" id="ojg-nm-a44"/>
+                            <constraint firstItem="oag-5Q-YiY" firstAttribute="top" secondItem="bUL-rk-qXg" secondAttribute="bottom" constant="37" id="qpJ-yB-JYP"/>
+                            <constraint firstItem="oag-5Q-YiY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sOc-Th-RMP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kem-wt-liP" secondAttribute="bottom" constant="30" id="zUK-fK-R8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ticketNoTextField" destination="bUL-rk-qXg" id="g3L-tP-g1Y"/>
+                        <outlet property="ticketsPickerView" destination="oag-5Q-YiY" id="7mr-k4-yhd"/>
+                        <outlet property="ticketsTextView" destination="kem-wt-liP" id="SBc-NN-gLn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="CtG-kt-5TE">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="rMv-7J-7MM" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cU3-s1-uRl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xny-SQ-dLz">
+                                <rect key="frame" x="0.0" y="118" width="375" height="369"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ticketCell" textLabel="hbq-yb-8Yn" detailTextLabel="LB5-ZW-HD8" style="IBUITableViewCellStyleValue1" id="a8G-XW-8Ju">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a8G-XW-8Ju" id="AyX-vG-T3h">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hbq-yb-8Yn">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LB5-ZW-HD8">
+                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Tickets are:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vka-pp-re2">
+                                <rect key="frame" x="16" y="60" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fF-KJ-DZW">
+                                <rect key="frame" x="16" y="547" width="175" height="30"/>
+                                <state key="normal" title="Add Your Credit Card Info"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLk-ba-15H">
+                                <rect key="frame" x="296" y="547" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="rMv-7J-7MM" eventType="touchUpInside" id="JRS-us-kVe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.96470588235294119" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sXj-AZ-zkm" firstAttribute="bottom" secondItem="2fF-KJ-DZW" secondAttribute="bottom" constant="90" id="06J-17-k1d"/>
+                            <constraint firstItem="sXj-AZ-zkm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vka-pp-re2" secondAttribute="trailing" symbolic="YES" id="0fJ-d2-t0R"/>
+                            <constraint firstItem="2fF-KJ-DZW" firstAttribute="top" secondItem="xny-SQ-dLz" secondAttribute="bottom" constant="60" id="BBK-Wr-LcF"/>
+                            <constraint firstItem="2fF-KJ-DZW" firstAttribute="baseline" secondItem="qLk-ba-15H" secondAttribute="baseline" id="C7I-r1-xWz"/>
+                            <constraint firstItem="vka-pp-re2" firstAttribute="leading" secondItem="cU3-s1-uRl" secondAttribute="leadingMargin" id="Fw9-N2-MjL"/>
+                            <constraint firstItem="xny-SQ-dLz" firstAttribute="leading" secondItem="cU3-s1-uRl" secondAttribute="leading" id="Iq4-pZ-CMx"/>
+                            <constraint firstItem="vka-pp-re2" firstAttribute="leading" secondItem="2fF-KJ-DZW" secondAttribute="leading" id="Me3-sh-uaV"/>
+                            <constraint firstItem="xny-SQ-dLz" firstAttribute="top" secondItem="vka-pp-re2" secondAttribute="bottom" constant="37" id="bMj-wF-EiU"/>
+                            <constraint firstAttribute="trailing" secondItem="xny-SQ-dLz" secondAttribute="trailing" id="cpO-j1-mDn"/>
+                            <constraint firstItem="vka-pp-re2" firstAttribute="top" secondItem="sXj-AZ-zkm" secondAttribute="top" constant="40" id="dlp-cN-G76"/>
+                            <constraint firstItem="sXj-AZ-zkm" firstAttribute="trailing" secondItem="qLk-ba-15H" secondAttribute="trailing" constant="42" id="szP-Pz-y53"/>
+                            <constraint firstItem="qLk-ba-15H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2fF-KJ-DZW" secondAttribute="trailing" constant="8" symbolic="YES" id="xb0-z7-RBY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sXj-AZ-zkm"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="xny-SQ-dLz" id="aYs-ep-opV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgF-Ua-GOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858.39999999999998" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
